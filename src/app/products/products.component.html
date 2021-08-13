@@ -1,0 +1,15 @@
+<main>
+    <p>
+        This page is a list of info about all the products in our store.
+    </p>
+    <h3>
+        Products:
+    </h3>
+    <div>
+        <div *ngFor="let product of products">
+            <h3>{{product.name}}</h3>
+            <p>Price: {{product.price}}</p>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</main>
