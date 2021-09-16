@@ -19,9 +19,9 @@ export class ProductsService {
   getProductList() {
     const headers= new HttpHeaders()
     .set('content-type', 'application/json')
-    .set('Authorization', `Bearer YOUR-API-KEY-HERE`)
+    .set('Authorization', `Bearer ${process.env.TAKESHAPE_API_ENDPOINT}`)
 
-    return this.http.post<any>('YOUR-ENDPOINT-HERE', 
+    return this.http.post<any>(process.env.TAKESHAPE_ENDPOINT, 
         {"query":`query{
           getProductList{
             items{
